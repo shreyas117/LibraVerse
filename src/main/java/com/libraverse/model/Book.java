@@ -18,6 +18,7 @@ public class Book {
     @Column(length = 5000)
     private String description;
     private String imageUrl;
+    private float rating;
     private int stock;
 
 //    @ManyToOne
@@ -72,6 +73,15 @@ public class Book {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+
 
     public int getStock() {
         return stock;
