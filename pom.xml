@@ -15,8 +15,6 @@
 	<description>Online bookstore application where users can browse, search, and purchase books. The application will have features such as user authentication, book listings, book details, a shopping cart, and order management.</description>
 	<properties>
 		<java.version>17</java.version>
-		<maven.compiler.source>18</maven.compiler.source>
-		<maven.compiler.target>18</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,16 +44,16 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 <!--		<dependency>-->
-<!--			<groupId>mysql</groupId>-->
-<!--			<artifactId>mysql-connector-java</artifactId>-->
+<!--			<groupId>com.mysql</groupId>-->
+<!--			<artifactId>mysql-connector-j</artifactId>-->
 <!--			<scope>runtime</scope>-->
 <!--		</dependency>-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
