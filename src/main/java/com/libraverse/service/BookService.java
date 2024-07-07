@@ -55,6 +55,7 @@ public class BookService {
                             ? new BigDecimal(saleInfoNode.path("listPrice").path("amount").asDouble(0.0))
                             : new BigDecimal("0.00"));
                     book.setStock(10); // Default stock
+                    book.setRating(volumeInfoNode.path("averageRating").asDouble());
 
                     bookRepository.save(book);
                 }
