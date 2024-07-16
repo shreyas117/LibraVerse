@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/books")
+@CrossOrigin(origins = "http://localhost:3000")
 public class BookController {
 
     @Autowired
@@ -27,6 +28,7 @@ public class BookController {
     @GetMapping
     public List<Book> getAllBooks(){
         return bookRepository.findAll();
+
         //return authorService.getAllAuthors();
     }
 
