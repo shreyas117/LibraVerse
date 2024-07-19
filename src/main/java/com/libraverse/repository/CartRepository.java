@@ -11,10 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface CartRepository extends JpaRepository<Cart, Long> {
 
+
+    @Query("select quantity from Cart where id = ?1")
     int findQuantityById(Long id);
 
     @Modifying
     @Transactional
-    @Query("UPDATE Cart c SET c.quantity = :quantity WHERE c.id = :id")
+    @Query("UPDATE Cart SET quantity = ?2 WHERE id = ?1")
     void updateQuantityById(Long id, int res);
 }

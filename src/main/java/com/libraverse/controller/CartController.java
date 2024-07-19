@@ -28,9 +28,14 @@ public class CartController {
         }
        else {
            int count= cart.getQuantity();
+            System.out.print(count);
            int old= cartRepository.findQuantityById(cart.getId());
            int res= old+count;
+           cart.setQuantity(res);
+           System.out.print(res);
+            //
            cartRepository.updateQuantityById(cart.getId(), res);
+            //cartRepository.save(cart);
 
         }
 
