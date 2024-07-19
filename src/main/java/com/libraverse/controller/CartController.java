@@ -27,20 +27,14 @@ public class CartController {
             cartRepository.save(cart);
         }
        else {
-           int count= cart.getQuantity();
+            int count = cart.getQuantity();
             System.out.print(count);
-           int old= cartRepository.findQuantityById(cart.getId());
-           int res= old+count;
-           cart.setQuantity(res);
-           System.out.print(res);
-            //
-           cartRepository.updateQuantityById(cart.getId(), res);
+            int old = cartRepository.findQuantityById(cart.getId());
+            int res = old + count;
+            cartRepository.updateQuantityById(cart.getId(), res);
             //cartRepository.save(cart);
-
         }
-
     }
-
     @GetMapping("/fetchCart")
     public List<Cart> fetchCart(){
         return cartRepository.findAll();
@@ -52,6 +46,10 @@ public class CartController {
          cartRepository.deleteAll();
     }
 
+    @PostMapping("/deleteCartItem/{id}")
+    public void getUserById(@PathVariable("id") Long id) {
+        cartRepository.deleteById(id);
+    }
 
 
 
