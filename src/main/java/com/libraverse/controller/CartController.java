@@ -47,10 +47,9 @@ public class CartController {
     }
 
     @PostMapping("/deleteCartItem/{id}")
-    public void getUserById(@PathVariable("id") Long id) {
+    public List<Cart> getUserById(@PathVariable("id") Long id) {
         cartRepository.deleteById(id);
+
+        return fetchCart(); //amazing stuff by shreyas
     }
-
-
-
 }
