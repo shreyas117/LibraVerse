@@ -20,3 +20,4 @@ public interface CartRepository extends JpaRepository<Cart, Long> {
     @Query("UPDATE Cart SET quantity = ?2 WHERE id = ?1")
     void updateQuantityById(Long id, int res);
 }
+

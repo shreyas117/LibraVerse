@@ -19,10 +19,13 @@ public class AuthorController {
     @Autowired
     //private AuthorService authorService
     private BookRepository bookRepository;
+    @Autowired
+    private AuthorService authorService;
 
     @GetMapping
     public List<Book> getAllAuthors(){
         return bookRepository.findAll();
         //return authorService.getAllAuthors();
+        
     }
 }
