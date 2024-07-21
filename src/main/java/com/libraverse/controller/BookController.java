@@ -34,10 +34,11 @@ public class BookController {
 
 
 
-    @GetMapping("/search")
-    public List<Book> searchResult(){
+    @GetMapping("/search/{title}")
+    public List<Book> searchResult(@PathVariable String title){
         //System.out.println(title);
-        return bookRepository.findByName();
+        return bookRepository.findByName(title);
+       // bookRepository.find
     }
 
     // Other existing methods for CRUD operations
