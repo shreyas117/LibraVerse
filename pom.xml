@@ -15,6 +15,8 @@
 	<description>Online bookstore application where users can browse, search, and purchase books. The application will have features such as user authentication, book listings, book details, a shopping cart, and order management.</description>
 	<properties>
 		<java.version>17</java.version>
+		<maven.compiler.source>18</maven.compiler.source>
+		<maven.compiler.target>18</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -52,6 +54,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.32</version>
 			<scope>runtime</scope>
 		</dependency>
 
