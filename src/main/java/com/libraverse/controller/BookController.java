@@ -36,7 +36,6 @@ public class BookController {
 
     @GetMapping("/search")
     public List<Book> searchResult(){
-        //System.out.println(title);
         return bookRepository.findByName();
     }
 
