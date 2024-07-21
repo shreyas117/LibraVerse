@@ -32,5 +32,13 @@ public class BookController {
         //return authorService.getAllAuthors();
     }
 
+
+
+    @GetMapping("/search")
+    public List<Book> searchResult(){
+        //System.out.println(title);
+        return bookRepository.findByName();
+    }
+
     // Other existing methods for CRUD operations
 }
