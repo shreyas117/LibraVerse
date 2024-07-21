@@ -18,7 +18,7 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
    // @Modifying
    // @Transactional
-    @Query(value="select * from book where title like %?1",nativeQuery = true)
+    @Query(value="select * from book where title like %?1%",nativeQuery = true)
     List<Book> findByName(String title);
 
 }
