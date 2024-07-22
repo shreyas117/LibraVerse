@@ -52,4 +52,12 @@ public class CartController {
 
         return fetchCart(); //amazing stuff by shreyas
     }
+
+    @PutMapping("/updateCartQuantity/{id}/{quantity}")
+    public List<Cart> updateQuanatity(@PathVariable("id") Long id, @PathVariable("quantity") int quantity ){
+
+        cartRepository.updateQuantityById(id,quantity);
+        return fetchCart();
+
+    }
 }
