@@ -41,9 +41,14 @@ public class CartController {
     }
 
     @PostMapping("/deleteCart")
-
-    public void deleteCart(){
-         cartRepository.deleteAll();
+    public String deleteCart(){
+        if(cartRepository.count() > 0) {
+            cartRepository.deleteAll();
+            return "Cart Deleted Successfully!";
+        }
+        else{
+            return "Cart is Empty";
+        }
     }
 
     @PostMapping("/deleteCartItem/{id}")
